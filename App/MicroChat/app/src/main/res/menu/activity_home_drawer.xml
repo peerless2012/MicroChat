@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/group_home">
+        <item
+            android:checked="true"
+            android:id="@+id/drawer_chats"
+            android:icon="@drawable/drawer_menu_chats"
+            android:title="@string/drawer_chats"/>
+        <item
+            android:id="@+id/drawer_contacts"
+            android:icon="@drawable/drawer_menu_contacts"
+            android:title="@string/drawer_contacts"/>
+        <item
+            android:id="@+id/drawer_moments"
+            android:icon="@drawable/drawer_menu_moments"
+            android:title="@string/drawer_moments"/>
+    </group>
+    <group android:checkableBehavior="single"
+        android:id="@+id/group_find">
+        <item
+            android:id="@+id/drawer_scan_qr_code"
+            android:icon="@drawable/drawer_menu_scan_qr"
+            android:title="@string/drawer_scan_qr_code"/>
+        <item
+            android:id="@+id/drawer_shake"
+            android:icon="@drawable/drawer_menu_shake"
+            android:title="@string/drawer_shake"/>
+        <item
+            android:id="@+id/drawer_people_nearby"
+            android:icon="@drawable/drawer_menu_people_near_by"
+            android:title="@string/drawer_people_nearby"/>
+        <item
+            android:id="@+id/drawer_drift_bottle"
+            android:icon="@drawable/drawer_menu_drift_bottle"
+            android:title="@string/drawer_drift_bottle"/>
+    </group>
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/group_find_2">
+        <item
+            android:id="@+id/drawer_games"
+            android:icon="@drawable/drawer_menu_geme"
+            android:title="@string/drawer_games"/>
+    </group>
+
+</menu>

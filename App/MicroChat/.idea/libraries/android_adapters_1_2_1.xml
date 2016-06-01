@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="android-adapters-1.2.1">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/io.realm/android-adapters/1.2.1/res" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/io.realm/android-adapters/1.2.1/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../../AndroidSdk/gradle-2.13-rc-1/caches/modules-2/files-2.1/io.realm/android-adapters/1.2.1/124e4f2c767472736e6a1f5820148a6e34783e18/android-adapters-1.2.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

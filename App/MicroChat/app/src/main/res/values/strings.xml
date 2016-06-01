@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">MicroChat</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!--Drawer-->
+    <string name="drawer_chats">会话</string>
+    <string name="drawer_contacts">联系人</string>
+    <string name="drawer_moments">动态</string>
+
+    <string name="drawer_scan_qr_code">扫描二维码</string>
+    <string name="drawer_shake">摇一摇</string>
+    <string name="drawer_people_nearby">附近的人</string>
+    <string name="drawer_drift_bottle">漂流瓶</string>
+
+    <string name="drawer_games">游戏</string>
+
+
+</resources>
