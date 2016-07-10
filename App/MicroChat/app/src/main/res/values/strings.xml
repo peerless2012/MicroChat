@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MicroChat</string>
+    <string name="app_name">微聊</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -19,10 +19,10 @@
     <string name="drawer_games">游戏</string>
 
     <!--Fragment-->
-    <string name="fragment_chats_title">聊天</string>
+    <string name="fragment_chats_title">会话</string>
     <string name="fragment_chats_tag">charts</string>
 
-    <string name="fragment_conversions_title">会话</string>
+    <string name="fragment_conversions_title">聊天</string>
     <string name="fragment_conversions_tag">conversions</string>
 
     <string name="fragment_contacts_title">联系人</string>
