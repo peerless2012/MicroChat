@@ -1,17 +1,16 @@
 package com.peerless2012.microchat.base;
 
 import android.app.Activity;
-import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.LayoutRes;
-import android.support.design.widget.AppBarLayout;
+import android.support.annotation.CallSuper;
+import android.support.annotation.StringRes;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import java.io.File;
+import android.widget.Toast;
 import com.peerless2012.microchat.R;
 
 /**
@@ -21,19 +20,27 @@ import com.peerless2012.microchat.R;
 * @Version V1.0
 * @Description: Activity的基类
 */
- abstract public class BaseActivity extends AppCompatActivity {
+ abstract public class BaseActivity extends AppCompatActivity{
     protected String cacheDir;
     protected ViewGroup.LayoutParams contentViewParams;
     protected Toolbar toolbar;
-
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    final protected void onCreate(Bundle savedInstanceState) {
+        onSaveInstance(savedInstanceState);
         super.onCreate(savedInstanceState);
         initActivity();
         initView();
         initListener();
         initData();
     }
+    /**
+     * 如果你想获取saveinstance，可以重写此方法
+     * @param savedInstanceState
+     */
+    protected void onSaveInstance(Bundle savedInstanceState){
+        // do nothing
+    }
+
     private void initActivity() {
         int contentLayoutRes = getContentLayout();
         if (contentLayoutRes > 0) {
@@ -46,25 +53,13 @@ import com.peerless2012.microchat.R;
                 throw new IllegalArgumentException("The content view layout res or view is null!");
             }
         }
-
         toolbar = (Toolbar) findViewById(R.id.toolbar);
-        if (toolbar != null) {
-            if (Build.VERSION.SDK_INT == Build.VERSION_CODES.KITKAT){
-                AppBarLayout.LayoutParams params = (AppBarLayout.LayoutParams) toolbar.getLayoutParams();
-                params.topMargin+= getStatusBarHeight();
-            }
+        if (toolbar != null){
             setSupportActionBar(toolbar);
             ActionBar actionBar = getSupportActionBar();
             if (!isHome() && actionBar != null) {
                 actionBar.setDisplayHomeAsUpEnabled(true);
             }
-        }
-
-        File externalCache = getExternalCacheDir();
-        if (externalCache != null) {
-            cacheDir = externalCache.getAbsolutePath();
-        }else {
-            cacheDir = getCacheDir().getAbsolutePath();
         }
     }
 
@@ -85,7 +80,7 @@ import com.peerless2012.microchat.R;
      * 获取Activity的布局文件id
      * @return 布局id
      */
-    protected abstract @LayoutRes int getContentLayout();
+    protected abstract int getContentLayout();
 
     /**
      * 初始化View
@@ -110,6 +105,12 @@ import com.peerless2012.microchat.R;
         }
     }
 
+    @CallSuper
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
+
     @SuppressWarnings("unchecked")
     protected <T extends View> T getView(Activity activity,int viewResId) {
         return (T)activity.findViewById(viewResId);
@@ -131,11 +132,11 @@ import com.peerless2012.microchat.R;
         return super.onOptionsItemSelected(item);
     }
 
-    private int getStatusBarHeight() {
-        int resId = getResources().getIdentifier("status_bar_height","dimen","android");
-        if(resId>0){
-            return getResources().getDimensionPixelSize(resId);
-        }
-        return 0;
+    protected void toast(@StringRes int resId){
+        toast(getString(resId));
+    }
+
+    protected void toast(String str){
+        Toast.makeText(getApplicationContext(),str,Toast.LENGTH_LONG).show();
     }
 }

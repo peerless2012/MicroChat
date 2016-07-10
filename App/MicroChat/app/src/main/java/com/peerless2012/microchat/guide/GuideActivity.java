@@ -2,6 +2,8 @@ package com.peerless2012.microchat.guide;
 
 import android.content.Context;
 import android.content.Intent;
+import android.view.ViewGroup;
+import android.widget.ListView;
 
 import com.peerless2012.microchat.base.BaseActivity;
 

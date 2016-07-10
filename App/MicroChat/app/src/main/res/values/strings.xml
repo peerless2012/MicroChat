@@ -18,5 +18,40 @@
 
     <string name="drawer_games">游戏</string>
 
+    <!--Fragment-->
+    <string name="fragment_chats_title">聊天</string>
+    <string name="fragment_chats_tag">charts</string>
 
+    <string name="fragment_conversions_title">会话</string>
+    <string name="fragment_conversions_tag">conversions</string>
+
+    <string name="fragment_contacts_title">联系人</string>
+    <string name="fragment_contacts_tag">contacts</string>
+
+    <string name="fragment_moments_title">动态</string>
+    <string name="fragment_moments_tag">moments</string>
+
+    <string name="fragment_scan_qr_title">扫描二维码</string>
+    <string name="fragment_scan_qr_tag">scan_qr</string>
+
+    <string name="fragment_shake_title">摇一摇</string>
+    <string name="fragment_shake_tag">shake</string>
+
+    <string name="fragment_nearby_title">附近的人</string>
+    <string name="fragment_nearby_tag">people_nearby</string>
+
+    <string name="fragment_drift_bottle_title">漂流瓶</string>
+    <string name="fragment_drift_bottle_tag">drift_bottle</string>
+
+    <string name="fragment_game_title">漂流瓶</string>
+    <string name="fragment_game_tag">game</string>
+
+    <string name="fragment_news_title">新闻</string>
+    <string name="fragment_news_tag">news</string>
+
+    <string name="fragment_setting_title">设置</string>
+    <string name="fragment_setting_tag">setting</string>
+
+    <string name="fragment_about_title">关于</string>
+    <string name="fragment_about_tag">about</string>
 </resources>

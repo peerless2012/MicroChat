@@ -1,4 +1,4 @@
-package com.peerless2012.microchat.home.chats;
+package com.peerless2012.microchat.home.about;
 
 import android.view.View;
 import com.peerless2012.microchat.R;
@@ -7,15 +7,15 @@ import com.peerless2012.microchat.base.BaseFragment;
 /**
  * @author peerless2012
  * @Email peerless2012@126.com
- * @DateTime 2016/6/1 22:26
+ * @DateTime 2016/6/1 22:44
  * @Version V1.0
- * @Description : 会话界面
+ * @Description :关于
  */
-public class ChatsFragment extends BaseFragment{
+public class AboutFragment extends BaseFragment{
 
     @Override
     protected int getViewLayoutRes() {
-        return R.layout.fragment_chats;
+        return R.layout.fragment_about;
     }
 
     @Override
@@ -35,12 +35,11 @@ public class ChatsFragment extends BaseFragment{
 
     @Override
     public int getTitle() {
-        return R.string.fragment_chats_title;
+        return R.string.fragment_about_title;
     }
 
     @Override
     public int getFragmentTag() {
-        return R.string.fragment_chats_tag;
+        return R.string.fragment_about_tag;
     }
-
 }

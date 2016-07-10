@@ -1,5 +1,7 @@
 package com.peerless2012.microchat.home;
 
+import java.util.UUID;
+
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
 import io.realm.annotations.RealmClass;
@@ -14,20 +16,10 @@ import io.realm.annotations.RealmClass;
 @RealmClass
 public class People extends RealmObject {
 
-    @PrimaryKey
-    private int id;
 
     private String name;
 
     private int age;
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public String getName() {
         return name;
@@ -48,7 +40,6 @@ public class People extends RealmObject {
     @Override
     public String toString() {
         return "People{" +
-                "id=" + id +
                 ", name='" + name + '\'' +
                 ", age=" + age +
                 '}';
