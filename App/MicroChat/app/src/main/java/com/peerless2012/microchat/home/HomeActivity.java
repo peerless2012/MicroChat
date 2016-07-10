@@ -21,6 +21,7 @@ import android.widget.TextView;
 import com.peerless2012.microchat.R;
 import com.peerless2012.microchat.base.BaseActivity;
 import com.peerless2012.microchat.base.BaseFragment;
+import com.peerless2012.microchat.home.chats.ChatsFragment;
 import com.peerless2012.microchat.home.contacts.ContactsFragment;
 import com.peerless2012.microchat.home.conversions.ConversationsFragment;
 import com.peerless2012.microchat.home.driftbottle.DriftBottleFragment;
@@ -56,15 +57,6 @@ public class HomeActivity extends BaseActivity
 
     @Override
     protected void initView() {
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, mDrawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -79,8 +71,7 @@ public class HomeActivity extends BaseActivity
         mHeaderBg = getView(mDrawerHeaderView,R.id.drawer_header_bg);
         mHeaderName = getView(mDrawerHeaderView,R.id.drawer_header_name);
 
-        changeFragment(ConversationsFragment.class,getString(R.string.fragment_conversions_tag),null);
-        setTitle(((BaseFragment)preFragment).getTitle());
+        changeFragment(ChatsFragment.class,getString(R.string.fragment_chats_tag),null);
         changeTitle();
     }
 
@@ -136,8 +127,8 @@ public class HomeActivity extends BaseActivity
         Bundle bundle = null;
         if (id == R.id.drawer_chats) { // 会话
 
-            clazz = ConversationsFragment.class;
-            tagRes = R.string.fragment_conversions_tag;
+            clazz = ChatsFragment.class;
+            tagRes = R.string.fragment_chats_tag;
 
         } else if (id == R.id.drawer_contacts) {//联系人
 
